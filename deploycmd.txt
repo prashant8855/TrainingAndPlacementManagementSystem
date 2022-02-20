@@ -1,0 +1,25 @@
+1) sudo apt update
+2)sudo apt install docker.io
+3)sudo docker -v
+4)sudo systemctl status docker 
+5)sudo docker pull hello-world
+6)sudo docker run hello-world 
+7)sudo docker pull nginx
+8)sudo docker run --name webserver  -d -p 8000:80 nginx:latest
+9)sudo docker images
+10)sudo docker ps
+
+
+exam imp
+
+1) sudo apt update
+2)sudo apt install docker.io
+3)sudo docker -v
+4)sudo systemctl status docker (ctrl c)
+5)git clone githubRepoUrl
+6)ls (must show github clone folder name)
+7)cd FolderName
+8)sudo docker build -t FolderName . (Dot after foldername)
+9)sudo docker images
+10)sudo docker run --name expressserver  -d -p 8081:8081 Repository:TAG
+11)sudo docker ps

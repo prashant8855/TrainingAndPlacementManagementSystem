@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>219106_Mohd_Naeem</title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: row;
+      }
+      form{
+          margin: auto;
+        border: 2px solid black ;
+      }
+      #tab{
+        border: 2px solid black ;
+        border-collapse: collapse;
+      }
+    </style>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#btn1").click(function () {
+          var name = $("#nm").val();
+          var add = $("#add").val();
+          var age = $("#age").val();
+          var no = $("#dep").val();
+          if (name == "" || add == "" || age == "" || no == "") {
+            alert("all filed mandetory");
+          } else {
+            $("#nm,#add,#age,#dep").css("background-color", "yellow");
+          }
+        });
+
+        $("#btn2").click(function () {
+          var str = `<form ><table border="3" id="tab" >
+                       <tr>
+                        <td>Name:</td>
+                        <td><input type="text" name="nm" id="nm" /></td>
+                        </tr>
+                       <tr>
+                        <td>age:</td>
+                        <td><input type="text" name="age" id="age" /></td>
+                        </tr>
+                       <tr>
+                        <td>gender:</td>
+                        <td><input type="text" name="gen" id="gen" /></td>
+                        </tr>
+            </table></form>`;
+          $("#fm").html(str);
+        });
+
+        $("#btn3").click(function () {
+          $("#tab").css("background-color", "orange");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <form >
+        Name: <input type="text" name="nm" id="nm" /> <br />
+        Address:<input type="text" name="add" id="add" /> <br />
+        Age:<input type="text" name="age" id="age" /> <br />
+        No of dependent:<input type="text" name="dep" id="dep" /> <br />
+        <button type="button" name="bt1" id="btn1">change color</button>
+        <button type="button" name="bt2" id="btn2">Add element</button>
+        <button type="button" name="bt3" id="btn3">change background</button>
+      </form>
+      <div id="fm"></div>
+    </div>
+  </body>
+</html>
